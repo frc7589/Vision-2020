@@ -11,7 +11,7 @@ def changes():
 	global capId
 	preCheck = False
 	while not stopCap:
-		check = vt.getBoolean('buttonA',False)
+		check = vt.getBoolean('start button',False)
 		if check and not preCheck:
 			capId = (capId+1)%2	
 		preCheck = check
@@ -31,7 +31,7 @@ def main():
 	global cap,stopCap,vt
 
 	roborio_ip = '10.75.89.2'
-	NWTable = 'vision Table'
+	NWTable = 'vision table'
 
 	cap.append(openCam(0))
 	cap.append(openCam(1))
